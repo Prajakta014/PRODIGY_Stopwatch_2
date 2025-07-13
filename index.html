@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch Web App | Developed by Prajakta</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="mode-toggle">
+        <label>
+      <input type="checkbox" onclick="toggleMode()"> Light Mode
+    </label>
+    </div>
+
+    <div class="container">
+        <h1 class="animated-title">Stopwatch⏱️</h1>
+        <div class="circle" id="progress">
+            <div class="stopwatch" id="display">00:00:00</div>
+        </div>
+        <div class="controls">
+            <button onclick="start()">Start</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="lap()">Lap</button>
+        </div>
+        <ul id="laps"></ul>
+        <div class="footer">Stopwatch Web App | Developed by Prajakta</div>
+    </div>
+
+    <audio id="beep" src="https://www.soundjay.com/button/beep-07.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

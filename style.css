@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #240057, #5ab6ff, #240057);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.3s ease;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.light-mode {
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+    color: #222;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(#5ab6ff 0deg, #240057 0deg);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatch {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.controls button {
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.controls button:nth-child(1) {
+    background-color: #4caf50;
+}
+
+.controls button:nth-child(2) {
+    background-color: #f44336;
+}
+
+.controls button:nth-child(3) {
+    background-color: #2196f3;
+}
+
+.controls button:nth-child(4) {
+    background-color: #ffc107;
+    color: black;
+}
+
+.controls button:hover {
+    opacity: 0.85;
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    max-height: 120px;
+    overflow-y: auto;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.mode-toggle input {
+    transform: scale(1.5);
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+.animated-title {
+    display: inline-block;
+    font-size: 2.8rem;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-title:hover {
+    transform: scale(1.05) rotate(-1deg);
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffd700;
+}
